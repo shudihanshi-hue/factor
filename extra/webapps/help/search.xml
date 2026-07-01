@@ -1,0 +1,73 @@
+<?xml version='1.0' ?>
+
+<t:chloe xmlns:t="http://factorcode.org/chloe/1.0">
+
+    <t:title>Search - Factor Documentation</t:title>
+    <t:style t:include="resource:extra/webapps/help/search.css" />
+    <t:script t:include="resource:extra/webapps/help/search.js" />
+
+    <t:html t:name="nav"/>
+
+    <div class="page">
+
+    <p><b>Search results for '<t:label t:name="search" />'</b></p>
+
+    <div class="tabs">
+
+    <t:if t:value="words">
+    <input class="radiotab" name="tabs" tabindex="1" type="radio" id="words" checked="checked" />
+    <label class="label" for="words">Words</label>
+    <div class="panel" tabindex="1">
+        <ul>
+            <t:each t:name="words">
+                <li> <t:link t:name="value" /> </li>
+            </t:each>
+        </ul>
+    </div>
+    </t:if>
+
+    <t:if t:value="vocabs">
+    <input class="radiotab" name="tabs" tabindex="1" type="radio" id="vocabs" />
+    <label class="label" for="vocabs">Vocabularies</label>
+    <div class="panel" tabindex="1">
+        <ul>
+            <t:each t:name="vocabs">
+                <li> <t:link t:name="value" /> </li>
+            </t:each>
+        </ul>
+    </div>
+    </t:if>
+
+    <t:if t:value="articles">
+    <input class="radiotab" name="tabs" tabindex="1" type="radio" id="articles" />
+    <label class="label" for="articles">Articles</label>
+    <div class="panel" tabindex="1">
+        <ul>
+            <t:each t:name="articles">
+                <li> <t:link t:name="value" /> </li>
+            </t:each>
+        </ul>
+    </div>
+    </t:if>
+
+    <t:if t:value="empty">
+    <p>No results found!</p>
+    </t:if>
+
+    </div>
+
+    <br />
+    <footer>
+    <p>
+    This documentation was generated offline from a
+    <code>load-all</code> image.  If you want, you can also
+    browse the documentation from within the <a
+    href="article-ui-tools.html">UI developer tools</a>. See
+    the <a href="https://factorcode.org">Factor website</a>
+    for more information.
+    </p>
+    </footer>
+
+    </div>
+
+</t:chloe>

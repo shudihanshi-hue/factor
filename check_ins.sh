@@ -1,0 +1,1 @@
+for f in zh.factor help/help.factor help/help-zh.factor help/help-zh-docs.factor help/home/home.factor help/home/home-docs.factor home/home.factor handbook/handbook.factor cookbook/cookbook.factor tour/tour.factor tutorial/tutorial.factor; do echo "=== $f ===" && grep "^IN:\|^ABOUT:" "$f"; done
